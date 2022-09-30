@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Merriweather Sans", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #151515;
+}
+
+li {
+  list-style: none;
+}
+
+header {
+  height: 98vh;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin-top: 1vh;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 1vh;
+  align-items: center;
+  height: 50px;
+}
+header nav .logo {
+  height: 100%;
+}
+header nav .list {
+  display: flex;
+  justify-content: space-around;
+  width: 40%;
+}
+header nav .list_links {
+  font-size: 1.1rem;
+}
+header nav .list_shop {
+  font-weight: bold;
+}
+header nav .function {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 7rem;
+}
+header nav .function_sign-up {
+  background-color: #151515;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header nav .function_sign-up a {
+  color: #E0E0E0;
+  font-size: 1rem;
+  padding: 0.5rem 0.75rem;
+}
+header nav .function .icon {
+  font-size: 1.75rem;
+}
+header .hero {
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+  margin: 0 auto;
+  background-image: url("../photos/Polygon 2.svg"), url("../photos/Polygon 3.svg"), url("../photos/Polygon 4.svg"), linear-gradient(72.57deg, rgba(226, 226, 226, 0.1) 8.53%, rgba(249, 255, 0, 0.35) 73.56%);
+  background-repeat: no-repeat;
+  background-position: 50% 70%, 5% 90%, 10% 10%;
+}
+header .hero_group_man {
+  max-height: 75vh;
+  background-image: url("../photos/Polygon 1.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+}
+header .hero_text {
+  width: 50%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}/*# sourceMappingURL=Style.css.map */

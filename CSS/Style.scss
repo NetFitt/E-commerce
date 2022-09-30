@@ -1,0 +1,105 @@
+@use "../SASS/layout/_global.scss" as *;
+@use "../SASS/pages/_variables.scss" as *;
+@use "../SASS/layout/media" as *;
+
+header{
+    height: 98vh;
+    nav{
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        margin: {
+            top:1vh;
+            right: auto;
+            left: auto;
+            bottom: 1vh;
+        };
+        align-items: center;
+        height: 50px;
+        .logo{
+            height: 100%;
+        }
+        .list{
+            display: flex;
+            justify-content: space-around;
+            width: 40%;
+            &_links{
+                font-size: 1.1rem;
+            }
+            &_shop{
+                font-weight: bold;
+            }
+
+        }
+        // BAG + Sign UP btns 
+        .function{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 7rem;
+            &_sign-up{
+                background-color: $text_color;
+                
+                border-radius: 5px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                a{
+                    color:$text_white;
+                    font-size: 1rem;
+                    padding: 0.5rem 0.75rem; 
+                }
+            }
+            .icon{
+                font-size: 1.75rem;
+            }
+        }
+    }
+
+
+    // this is for hero
+
+    .hero{
+        display: flex;
+        justify-content: space-around;
+        width: 90%;
+        margin: 0 auto;
+        background: {
+            
+            image:
+                url("../photos/Polygon 2.svg")
+                ,url("../photos/Polygon 3.svg")
+                ,url("../photos/Polygon 4.svg")
+                ,linear-gradient(72.57deg, rgba(226, 226, 226, 0.1) 8.53%
+                ,rgba(249, 255, 0, 0.35) 73.56%)
+            ;
+            repeat:no-repeat;
+            position:50% 70%,5% 90%,10% 10% ;
+            
+        };
+        
+        &_group{
+            
+            
+            
+            &_man{
+                max-height: 75vh;
+                background: {
+                    image: url("../photos/Polygon 1.svg");
+                    repeat: no-repeat;
+                    size: 100%;
+                    position: center;
+                };
+            }
+        }
+        
+        
+        &_text{
+            width: 50%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+}

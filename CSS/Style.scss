@@ -1,21 +1,21 @@
-@use "../SASS/layout/_global.scss" as *;
-@use "../SASS/pages/_variables.scss" as *;
-@use "../SASS/layout/media" as *;
+@use "../SASS/layout/global" as *;
+@use "../SASS/pages/variables" as *;
+
+
 
 header{
-    height: 98vh;
     nav{
         display: flex;
-        justify-content: space-between;
         width: 90%;
+        align-items: center;
+        height: 7vh;
+        justify-content: space-between;
         margin: {
             top:1vh;
             right: auto;
             left: auto;
-            bottom: 1vh;
+            bottom: 2vh;
         };
-        align-items: center;
-        height: 50px;
         .logo{
             height: 100%;
         }
@@ -52,7 +52,42 @@ header{
             }
             .icon{
                 font-size: 1.75rem;
+            }   
+        }
+
+        .menu{
+            display: none;
+            width: 2.5rem;
+            height: 75%;
+            
+            flex-direction: column;
+            justify-content: space-around;
+            &_burger{
+                background-color: black;
+                border-radius: 5px;
+                height: 6px;
+                width: 100%;
             }
+        }
+
+        @media screen and #{$maxMobile} {
+            
+            
+            .list{
+                display: none;
+
+            }
+
+            .function{
+                display: none;
+            }
+
+            .menu{
+                display: flex;
+            }
+
+            
+
         }
     }
 
@@ -62,7 +97,8 @@ header{
     .hero{
         display: flex;
         justify-content: space-around;
-        width: 90%;
+        position: relative;
+        width: 100%;
         margin: 0 auto;
         background: {
             
@@ -80,26 +116,327 @@ header{
         
         &_group{
             
-            
-            
             &_man{
-                max-height: 75vh;
+                height: 77vh;
                 background: {
                     image: url("../photos/Polygon 1.svg");
                     repeat: no-repeat;
                     size: 100%;
-                    position: center;
+                    position: center 60%;
                 };
             }
         }
-        
-        
         &_text{
             width: 50%;
+
             text-align: center;
             display: flex;
             flex-direction: column;
             justify-content: center;
+            &_title i{
+                font-size: 1.7rem;
+            }
+            &_p{
+                font-size: 1.1rem;
+            }
+            &_btn{
+                background-color: $text_color;
+                width: 175px;
+                margin: 12px auto;
+                border-radius: 50px;
+                a{
+                    display: block;
+                    padding: 15px 0;
+                    color: $text_white;
+                }
+
+            }
+
         }
+
+        // HERO POINTS (SLIDER)
+        &_point{
+            display: flex;
+            position: absolute;
+            justify-content: space-around;
+            bottom: 10px;
+            width: 65px;
+            &_points{
+                width: 10px;
+                height: 10px;
+                display: inline-block;
+                border-radius: 50%;
+                background-color: $text_color;
+            }
+        }
+
+    }
+
+    .down {
+        height: 12vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        i {
+            font-size: 2rem;
+        }
+
+    }
+
+    .lines{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        &_line{
+            border: 0.5px solid $text_color ;
+            opacity: 0.9;
+            width: 15%;
+        }
+    }
+
+    @media screen and #{$maxMobile} {
+        .hero{
+            flex-wrap: wrap;
+            background: {
+                position: 10% 30%, 95% 25%, 20% 90%;
+                size: auto, auto,50px
+            };
+            &_group_man{
+                height: 70vmax;
+                max-width: 95vw;
+            }
+            &_point{
+                top:10px;
+                bottom: auto;
+
+            }
+            &_text{
+                height: 20vh;
+                width: 95%;
+                &_title{
+                    margin-top: 15%;
+                }
+            }
+        }
+        .down{
+            display: none;
+           
+        }
+        
+    }
+
+}
+
+main{
+
+    // THE BANNER FOR MEN AND WOMEN 
+
+    .banner{
+        text-align: center;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: linear-gradient(290.06deg, rgba(254, 4, 10, 0.25) 11.46%, rgba(215, 215, 215, 0.1) 37.5%, rgba(208, 208, 208, 0.1) 61.98%, rgba(249, 255, 0, 0.25) 83.33%);
+        width: 90%;
+        border-radius: 5px;
+        margin:  {
+            top:30px;
+            left:auto;
+            right: auto;
+            
+        };
+        img{
+            width: 25%;
+        }
+        
+        .container{
+            display: inherit;
+            flex-direction: column;
+        
+            p{
+                line-height: 3rem;
+                font-size: 1.3rem;
+            } 
+            &_btn{
+                display: flex;
+                justify-content: center;
+                &_men{
+                    background-color: #BEC200;
+                    border-radius: 5px;
+                    margin-right:2.5%;
+
+                }
+                &_women{
+                    background-color: #BD1F22;  
+                    border-radius: 5px;
+                    margin-left:2.5%;
+                }
+                a{
+                    
+                    display: block;
+                    color: white;  
+                    width: 100px;
+                    padding: 10px 0 ;
+                }
+            }
+        }
+        
+        
+    }
+    @media screen and #{$maxMobile} {
+        .banner {
+            width: 100%;
+            justify-content: center;
+            padding: 20px;
+            img{
+                display: none;
+            }
+        }
+        
+    }
+    //THE SHOP
+
+    .content{
+
+        // TITLE FOR THE CONTENT SECTION
+        &_title{
+            
+            border-radius: 5px;
+            background-color: $text_color;
+            margin: 50px auto;
+            color: white;
+            
+            position: relative;
+            display: flex;
+            justify-content: center;
+            &_text{
+                font-size: 1.4rem;
+                padding: 20px;
+            }
+            &::before{
+                content: "";
+                display: block;
+                position: absolute;
+                width: 30%;
+                left: -30%;
+                top: 50%;
+                height: 1px;
+                background-color: $text_color;
+            }
+            &::after{
+                content: "";
+                display: block;
+                position: absolute;
+                width: 30%;
+                right: -30%;
+                top: 50%;
+                height: 1px;
+                background-color: $text_color;
+            }
+
+            @media screen and #{$maxMobile} {
+                width: 90%;
+                &_text{
+                    font-size: 1.2rem;
+                }
+                
+                &::before , &::after{
+                    display: none;
+                }
+                
+            }
+            
+            
+        }
+
+        // products
+        .product{
+            display: grid;
+            width: 90%;
+            margin: 0 auto;
+            gap: 30px;
+            grid-template-columns: repeat(auto-fill , minmax(250px, 1fr));
+            &_item{
+                background-color: #E0E0E0;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                &_text{
+                    display: flex;
+                    justify-content: space-around;
+                }
+                &_rating{
+                    display: block;
+                    margin: 10px auto;
+                }
+            }
+            &_img{
+                height: 350px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                &_test{
+                    max-height: 100%;
+                    max-width: 100%;
+                }
+                
+            }
+        }
+
+    }
+
+    .btn{
+        background-color: $text_color;
+        margin: 50px auto;
+        width: 200px;
+        text-align: center;
+        border-radius: 50px;
+        a{
+            display: block;
+            color: #E0E0E0;
+            padding: 20px;
+        }
+    }
+
+   
+}
+
+
+// footer
+
+footer{
+    width: 90%;
+    margin: 0 auto;
+    .line{
+        margin:20px auto ;
+        width: 80%;
+        height: 1px;
+        background-color: $text_color;
+    }
+    .container{
+        display: flex;
+        justify-content: space-between;
+        
+        &_media{
+            width: 150px;
+            display: flex;
+            justify-content: space-around;
+            i{
+                font-size: 2rem;
+            }
+        }
+    }
+    @media screen and #{$maxMobile} {
+        .container{
+            justify-content: center;
+            &_info{
+                display: none;
+            }
+            &_media{
+                width: 100%;
+            }
+        }
+        
+        
     }
 }

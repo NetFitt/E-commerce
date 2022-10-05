@@ -247,6 +247,7 @@ main .content_title {
   background-color: #151515;
   margin: 50px auto;
   color: white;
+  width: 50%;
   position: relative;
   display: flex;
   justify-content: center;
